@@ -1,0 +1,12 @@
+name: CoVID19_wfh_test
+title: CoVID19_wfh_test
+username:
+account: brookfieldiie
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1966290
+bundleId: 2928824
+url: https://brookfieldiie.shinyapps.io/CoVID19_wfh_test/
+when: 1585250698.94305
+asMultiple: FALSE
+asStatic: FALSE
