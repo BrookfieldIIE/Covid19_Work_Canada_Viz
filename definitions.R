@@ -156,6 +156,8 @@ main.plot <- function(triggers="Introduction"){
                            yaxis=list(fixedrange=TRUE),
                            showlegend = FALSE),
                     displayModeBar=F)
+    graph$x$layout$xaxis$title$font$size <- 15
+    graph$x$layout$yaxis$title$font$size <- 15
     graph
   }
   else if(triggers=="Health Workers"){
@@ -221,6 +223,20 @@ main.plot <- function(triggers="Introduction"){
                colour = "#e24585",
                label = "Registered Nurses",
                hjust = 0,
+               size = 9*0.352777778)+
+    annotate("segment",
+             x=72.25,
+             y=75.75,
+             xend=25,
+             yend=75,
+             colour = "#e24585",
+             linetype = "dotted") +
+      annotate("text",
+               x = 25,
+               y = 75,
+               colour = "#e24585",
+               label = "Pharmacists",
+               hjust = 0,
                size = 9*0.352777778)
     
     graph <- config(layout(ggplotly(main.plot,tooltip=c("text"),showlegend=FALSE,showscale=FALSE),
@@ -232,6 +248,9 @@ main.plot <- function(triggers="Introduction"){
     graph$x$data[[4]]$textposition <- "middle left"
     graph$x$data[[6]]$textposition <- "middle left"
     graph$x$data[[8]]$textposition <- "middle left"
+    graph$x$data[[10]]$textposition <- "middle left"
+    graph$x$layout$xaxis$title$font$size <- 15
+    graph$x$layout$yaxis$title$font$size <- 15
     graph
   }
   
@@ -294,6 +313,8 @@ main.plot <- function(triggers="Introduction"){
                     displayModeBar=F)
     graph$x$data[[4]]$textposition <- "middle left"
     graph$x$data[[6]]$textposition <- "middle left"
+    graph$x$layout$xaxis$title$font$size <- 15
+    graph$x$layout$yaxis$title$font$size <- 15
     graph
   }
   else if(triggers=="Introduction2"){
@@ -367,6 +388,8 @@ main.plot <- function(triggers="Introduction"){
                            yaxis=list(fixedrange=TRUE),
                            showlegend = FALSE),
                     displayModeBar=F)
+    graph$x$layout$xaxis$title$font$size <- 15
+    graph$x$layout$yaxis$title$font$size <- 15
     graph$x$data[[4]]$textposition <- "middle left"
     graph$x$data[[6]]$textposition <- "middle left"
     graph$x$data[[8]]$textposition <- "middle left"
@@ -448,6 +471,8 @@ main.plot <- function(triggers="Introduction"){
     graph$x$data[[4]]$textposition <- "middle left"
     graph$x$data[[6]]$textposition <- "middle right"
     graph$x$data[[8]]$textposition <- "middle left"
+    graph$x$layout$xaxis$title$font$size <- 15
+    graph$x$layout$yaxis$title$font$size <- 15
     graph
   }
   else if(triggers=="Work From Home"){
@@ -479,6 +504,8 @@ main.plot <- function(triggers="Introduction"){
                            yaxis=list(fixedrange=TRUE),
                            showlegend = FALSE),
                     displayModeBar=F)
+    graph$x$layout$xaxis$title$font$size <- 15
+    graph$x$layout$yaxis$title$font$size <- 15
     graph
   }
   else if(triggers=="Work From Home: Focus"){
@@ -502,7 +529,21 @@ main.plot <- function(triggers="Introduction"){
                                                                                str_wrap("Exposed once a year",7),
                                                                                str_wrap("Exposed once a month",7),
                                                                                str_wrap("Exposed once a week",7),
-                                                                               str_wrap("Exposed once a day",7)))
+                                                                               str_wrap("Exposed once a day",7))) +
+      annotate("segment",
+               x=85.75,
+               y=62.25,
+               xend=50,
+               yend=54,
+               colour = "#e24585",
+               linetype = "dotted") +
+      annotate("text",
+               x = 50,
+               y = 54,
+               colour = "#e24585",
+               label = "Home Support Workers",
+               hjust = 0,
+               size = 9*0.352777778)
     
     graph <- config(layout(ggplotly(main.plot,tooltip=c("text"),showlegend=FALSE,showscale=FALSE),
                            legend = list(orientation = 'h'),
@@ -510,6 +551,9 @@ main.plot <- function(triggers="Introduction"){
                            yaxis=list(fixedrange=TRUE),
                            showlegend = FALSE),
                     displayModeBar=F)
+    graph$x$data[[4]]$textposition <- "middle left"
+    graph$x$layout$xaxis$title$font$size <- 15
+    graph$x$layout$yaxis$title$font$size <- 15
     graph
   }
   
@@ -572,6 +616,8 @@ main.plot <- function(triggers="Introduction"){
                     displayModeBar=F)
     graph$x$data[[4]]$textposition <- "middle right"
     graph$x$data[[6]]$textposition <- "middle left"
+    graph$x$layout$xaxis$title$font$size <- 15
+    graph$x$layout$yaxis$title$font$size <- 15
     graph
   }
   
@@ -600,6 +646,8 @@ main.plot <- function(triggers="Introduction"){
                            yaxis=list(fixedrange=TRUE),
                            showlegend = FALSE),
                     displayModeBar=F)
+    graph$x$layout$xaxis$title$font$size <- 15
+    graph$x$layout$yaxis$title$font$size <- 15
     graph
   }
   else if(triggers=="Income Precarity"){
@@ -623,7 +671,49 @@ main.plot <- function(triggers="Introduction"){
                                                                                str_wrap("Exposed once a year",7),
                                                                                str_wrap("Exposed once a month",7),
                                                                                str_wrap("Exposed once a week",7),
-                                                                               str_wrap("Exposed once a day",7)))
+                                                                               str_wrap("Exposed once a day",7))) +
+      annotate("segment",
+               x=41.75,
+               y=51.50,
+               xend=31,
+               yend=75,
+               colour = "#e24585",
+               linetype = "dotted") +
+      annotate("text",
+               x = 31,
+               y = 75,
+               colour = "#e24585",
+               label = "Light Duty Cleaners",
+               hjust = 0,
+               size = 9*0.352777778) +
+      annotate("segment",
+               x=74.75,
+               y=27.75,
+               xend=25,
+               yend=37.5,
+               colour = "#e24585",
+               linetype = "dotted") +
+      annotate("text",
+               x=25,
+               y=37.5,
+               colour = "#e24585",
+               label = "Cashiers",
+               hjust = 0,
+               size = 9*0.352777778) +
+      annotate("segment",
+               x=78.75,
+               y=25,
+               xend=63,
+               yend=68,
+               colour = "#e24585",
+               linetype = "dotted") +
+      annotate("text",
+               x=63,
+               y=68,
+               colour = "#e24585",
+               label = "Taxi/Uber Drivers",
+               hjust = 0,
+               size = 9*0.352777778)
     
     graph <- config(layout(ggplotly(main.plot,tooltip=c("text"),showlegend=FALSE,showscale=FALSE),
                            legend = list(orientation = 'h'),
@@ -631,6 +721,11 @@ main.plot <- function(triggers="Introduction"){
                            yaxis=list(fixedrange=TRUE),
                            showlegend = FALSE),
                     displayModeBar=F)
+    graph$x$data[[4]]$textposition <- "middle left"
+    graph$x$data[[6]]$textposition <- "middle left"
+    graph$x$data[[8]]$textposition <- "middle left"
+    graph$x$layout$xaxis$title$font$size <- 15
+    graph$x$layout$yaxis$title$font$size <- 15
     graph
   }
   else if(triggers=="Part Time Workers"){
@@ -662,6 +757,8 @@ main.plot <- function(triggers="Introduction"){
                            yaxis=list(fixedrange=TRUE),
                            showlegend = FALSE),
                     displayModeBar=F)
+    graph$x$layout$xaxis$title$font$size <- 15
+    graph$x$layout$yaxis$title$font$size <- 15
     graph
   }
   else if(triggers=="Visible Minority Workers"){
@@ -693,6 +790,8 @@ main.plot <- function(triggers="Introduction"){
                            yaxis=list(fixedrange=TRUE),
                            showlegend = FALSE),
                     displayModeBar=F)
+    graph$x$layout$xaxis$title$font$size <- 15
+    graph$x$layout$yaxis$title$font$size <- 15
     graph
   }
 }
@@ -700,6 +799,8 @@ main.plot <- function(triggers="Introduction"){
 final.plot <- function(occupation_focus=""){
   work.styles.to.plot[,occ.focus:="0"]
   work.styles.to.plot[str_sub(noc_title,5)==occupation_focus,occ.focus:="1"]
+  x.focus <- work.styles.to.plot[occ.focus=="1",`Physical Proximity`]
+  y.focus <- work.styles.to.plot[occ.focus=="1",`Exposed to Disease or Infections`]
   main.plot <- ggplot(work.styles.to.plot,aes(`Physical Proximity`,`Exposed to Disease or Infections`)) +
     BF.Base.Theme +
     geom_point(aes(text=paste(str_sub(noc_title,start=5),
@@ -709,16 +810,30 @@ final.plot <- function(occupation_focus=""){
     ), size=emp,fill=occ.focus,colour=occ.focus),alpha=0.7) +
     scale_fill_manual(values=c(alpha("#14365D",0.5),alpha("#DD347A",0.8))) +
     scale_colour_manual(values=c(alpha("#14365D",0.5),"#DD347A")) +
-    scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Don't work near people",20),
+    scale_x_continuous(limits = c(0,100),expand=c(0,0),breaks=c(0,25,50,75,100),labels=c(str_wrap("Don't work near people",20),
                                                                            str_wrap("Work with others, but not closely",20),
                                                                            str_wrap("Slightly close e.g. Shared office",20),
                                                                            str_wrap("Moderately close e.g. arms length",20),
                                                                            str_wrap("Very close (near touching)",20))) +
-    scale_y_continuous(limits = c(0,100),breaks = c(0,25,50,75,100),labels=c(str_wrap("Never exposed",20),
+    scale_y_continuous(limits = c(0,100),expand=c(0,0),breaks = c(0,25,50,75,100),labels=c(str_wrap("Never exposed",20),
                                                                              str_wrap("Exposed once a year",20),
                                                                              str_wrap("Exposed once a month",20),
                                                                              str_wrap("Exposed once a week",20),
-                                                                             str_wrap("Exposed once a day",20)))
+                                                                             str_wrap("Exposed once a day",20)))+
+    annotate("segment",
+             x=x.focus,
+             y=y.focus,
+             xend=x.focus,
+             yend=0,
+             colour = "#e24585",
+             linetype = "dotted") +
+    annotate("segment",
+             x=x.focus,
+             y=y.focus,
+             xend=0,
+             yend=y.focus,
+             colour = "#e24585",
+             linetype = "dotted") 
   
   graph <- config(layout(ggplotly(main.plot,tooltip=c("text"),showlegend=FALSE,showscale=FALSE),
                          legend = list(orientation = 'h'),
@@ -726,6 +841,8 @@ final.plot <- function(occupation_focus=""){
                          yaxis=list(fixedrange=TRUE),
                          showlegend = FALSE),
                   displayModeBar=F)
+  graph$x$layout$xaxis$title$font$size <- 18
+  graph$x$layout$yaxis$title$font$size <- 18
   graph
 }
 
