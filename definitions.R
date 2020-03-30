@@ -139,11 +139,11 @@ main.plot <- function(triggers="Introduction"){
                                 "Number of Workers:",
                                 comma(signif(emp,3))
       ), size=emp),fill=alpha("#14365D",alpha=0.3),colour="#14365D",alpha=0.7) +
-      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Don't work near people",10),
+      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Do not work near people",10),
                                                                              str_wrap("Work with others, but not closely",10),
                                                                              str_wrap("Slightly close e.g. Shared office",10),
                                                                              str_wrap("Moderately close e.g. arms length",10),
-                                                                             str_wrap("Very close (near touching)",10))) +
+                                                                             str_wrap("Very close e.g. near touching",10))) +
       scale_y_continuous(limits = c(0,100),breaks = c(0,25,50,75,100),labels=c(str_wrap("Never exposed",7),
                                                                                 str_wrap("Exposed once a year",7),
                                                                                 str_wrap("Exposed once a month",7),
@@ -172,11 +172,11 @@ main.plot <- function(triggers="Introduction"){
       ), size=emp,fill=trigger.dum,colour=trigger.dum),alpha=0.7) +
       scale_fill_manual(values=c(alpha("#14365D",0.2),alpha("#DD347A",0.3))) +
       scale_colour_manual(values=c(alpha("#14365D",0.3),"#DD347A")) +
-      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Don't work near people",10),
+      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Do not work near people",10),
                                                                              str_wrap("Work with others, but not closely",10),
                                                                              str_wrap("Slightly close e.g. Shared office",10),
                                                                              str_wrap("Moderately close e.g. arms length",10),
-                                                                             str_wrap("Very close (near touching)",10))) +
+                                                                             str_wrap("Very close e.g. near touching",10))) +
       scale_y_continuous(limits = c(0,100),breaks = c(0,25,50,75,100),labels=c(str_wrap("Never exposed",7),
                                                                                str_wrap("Exposed once a year",7),
                                                                                str_wrap("Exposed once a month",7),
@@ -266,11 +266,11 @@ main.plot <- function(triggers="Introduction"){
       ), size=emp,fill=trigger.dum,colour=trigger.dum),alpha=0.7) +
       scale_fill_manual(values=c(alpha("#14365D",0.2),alpha("#DD347A",0.3))) +
       scale_colour_manual(values=c(alpha("#14365D",0.3),"#DD347A")) +
-      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Don't work near people",10),
+      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Do not work near people",10),
                                                                              str_wrap("Work with others, but not closely",10),
                                                                              str_wrap("Slightly close e.g. Shared office",10),
                                                                              str_wrap("Moderately close e.g. arms length",10),
-                                                                             str_wrap("Very close (near touching)",10))) +
+                                                                             str_wrap("Very close e.g. near touching",10))) +
       scale_y_continuous(limits = c(0,100),breaks = c(0,25,50,75,100),labels=c(str_wrap("Never exposed",7),
                                                                                str_wrap("Exposed once a year",7),
                                                                                str_wrap("Exposed once a month",7),
@@ -329,11 +329,11 @@ main.plot <- function(triggers="Introduction"){
       ), size=emp,fill=trigger.dum,colour=trigger.dum),alpha=0.7) +
       scale_fill_manual(values=c("#14365D","#DD347A")) +
       scale_colour_manual(values=c("#14365D","#DD347A")) +
-      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Don't work near people",10),
+      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Do not work near people",10),
                                                                              str_wrap("Work with others, but not closely",10),
                                                                              str_wrap("Slightly close e.g. Shared office",10),
                                                                              str_wrap("Moderately close e.g. arms length",10),
-                                                                             str_wrap("Very close (near touching)",10))) +
+                                                                             str_wrap("Very close e.g. near touching",10))) +
       scale_y_continuous(limits = c(0,100),breaks = c(0,25,50,75,100),labels=c(str_wrap("Never exposed",7),
                                                                                str_wrap("Exposed once a year",7),
                                                                                str_wrap("Exposed once a month",7),
@@ -408,11 +408,11 @@ main.plot <- function(triggers="Introduction"){
       ), size=emp,fill=trigger.dum,colour=trigger.dum),alpha=0.7) +
       scale_fill_manual(values=c(alpha("#14365D",0.2),alpha("#DD347A",0.3))) +
       scale_colour_manual(values=c(alpha("#14365D",0.3),"#DD347A")) +
-      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Don't work near people",10),
+      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Do not work near people",10),
                                                                              str_wrap("Work with others, but not closely",10),
                                                                              str_wrap("Slightly close e.g. Shared office",10),
                                                                              str_wrap("Moderately close e.g. arms length",10),
-                                                                             str_wrap("Very close (near touching)",10))) +
+                                                                             str_wrap("Very close e.g. near touching",10))) +
       scale_y_continuous(limits = c(0,100),breaks = c(0,25,50,75,100),labels=c(str_wrap("Never exposed",7),
                                                                                str_wrap("Exposed once a year",7),
                                                                                str_wrap("Exposed once a month",7),
@@ -487,11 +487,11 @@ main.plot <- function(triggers="Introduction"){
       ), size=emp,fill=trigger.dum,colour=trigger.dum),alpha=0.7) +
       scale_fill_manual(values=c(alpha("#DD347A",0.3),alpha("#14365D",0.3))) +
       scale_colour_manual(values=c("#DD347A","#14365D")) +
-      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Don't work near people",10),
+      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Do not work near people",10),
                                                                              str_wrap("Work with others, but not closely",10),
                                                                              str_wrap("Slightly close e.g. Shared office",10),
                                                                              str_wrap("Moderately close e.g. arms length",10),
-                                                                             str_wrap("Very close (near touching)",10))) +
+                                                                             str_wrap("Very close e.g. near touching",10))) +
       scale_y_continuous(limits = c(0,100),breaks = c(0,25,50,75,100),labels=c(str_wrap("Never exposed",7),
                                                                                str_wrap("Exposed once a year",7),
                                                                                str_wrap("Exposed once a month",7),
@@ -520,11 +520,11 @@ main.plot <- function(triggers="Introduction"){
       ), size=emp,fill=trigger.dum,colour=trigger.dum),alpha=0.7) +
       scale_fill_manual(values=c(alpha("#DD347A",0.3),alpha("#14365D",0.1))) +
       scale_colour_manual(values=c("#DD347A",alpha("#14365D",0.3))) +
-      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Don't work near people",10),
+      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Do not work near people",10),
                                                                              str_wrap("Work with others, but not closely",10),
                                                                              str_wrap("Slightly close e.g. Shared office",10),
                                                                              str_wrap("Moderately close e.g. arms length",10),
-                                                                             str_wrap("Very close (near touching)",10))) +
+                                                                             str_wrap("Very close e.g. near touching",10))) +
       scale_y_continuous(limits = c(0,100),breaks = c(0,25,50,75,100),labels=c(str_wrap("Never exposed",7),
                                                                                str_wrap("Exposed once a year",7),
                                                                                str_wrap("Exposed once a month",7),
@@ -569,11 +569,11 @@ main.plot <- function(triggers="Introduction"){
       ), size=emp,fill=trigger.dum,colour=trigger.dum),alpha=0.7) +
       scale_fill_manual(values=c(alpha("#14365D",0.1),alpha("#DD347A",0.3))) +
       scale_colour_manual(values=c(alpha("#14365D",0.3),"#DD347A")) +
-      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Don't work near people",10),
+      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Do not work near people",10),
                                                                              str_wrap("Work with others, but not closely",10),
                                                                              str_wrap("Slightly close e.g. Shared office",10),
                                                                              str_wrap("Moderately close e.g. arms length",10),
-                                                                             str_wrap("Very close (near touching)",10))) +
+                                                                             str_wrap("Very close e.g. near touching",10))) +
       scale_y_continuous(limits = c(0,100),breaks = c(0,25,50,75,100),labels=c(str_wrap("Never exposed",7),
                                                                                str_wrap("Exposed once a year",7),
                                                                                str_wrap("Exposed once a month",7),
@@ -629,11 +629,11 @@ main.plot <- function(triggers="Introduction"){
                                 "Number of Workers:",
                                 comma(signif(emp,3))
       ), size=emp),fill=alpha("#14365D",alpha=0.3),colour="#14365D",alpha=0.7) +
-      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Don't work near people",10),
+      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Do not work near people",10),
                                                                              str_wrap("Work with others, but not closely",10),
                                                                              str_wrap("Slightly close e.g. Shared office",10),
                                                                              str_wrap("Moderately close e.g. arms length",10),
-                                                                             str_wrap("Very close (near touching)",10))) +
+                                                                             str_wrap("Very close e.g. near touching",10))) +
       scale_y_continuous(limits = c(0,100),breaks = c(0,25,50,75,100),labels=c(str_wrap("Never exposed",7),
                                                                                str_wrap("Exposed once a year",7),
                                                                                str_wrap("Exposed once a month",7),
@@ -662,11 +662,11 @@ main.plot <- function(triggers="Introduction"){
       ), size=emp,fill=trigger.dum,colour=trigger.dum),alpha=0.7) +
       scale_fill_manual(values=c(alpha("#14365D",0.2),alpha("#DD347A",0.3))) +
       scale_colour_manual(values=c(alpha("#14365D",0.3),"#DD347A")) +
-      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Don't work near people",10),
+      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Do not work near people",10),
                                                                              str_wrap("Work with others, but not closely",10),
                                                                              str_wrap("Slightly close e.g. Shared office",10),
                                                                              str_wrap("Moderately close e.g. arms length",10),
-                                                                             str_wrap("Very close (near touching)",10))) +
+                                                                             str_wrap("Very close e.g. near touching",10))) +
       scale_y_continuous(limits = c(0,100),breaks = c(0,25,50,75,100),labels=c(str_wrap("Never exposed",7),
                                                                                str_wrap("Exposed once a year",7),
                                                                                str_wrap("Exposed once a month",7),
@@ -740,11 +740,11 @@ main.plot <- function(triggers="Introduction"){
       ), size=emp,fill=trigger.dum,colour=trigger.dum),alpha=0.7) +
       scale_fill_manual(values=c(alpha("#14365D",0.1),alpha("#DD347A",0.3))) +
       scale_colour_manual(values=c(alpha("#14365D",0.3),"#DD347A")) +
-      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Don't work near people",10),
+      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Do not work near people",10),
                                                                              str_wrap("Work with others, but not closely",10),
                                                                              str_wrap("Slightly close e.g. Shared office",10),
                                                                              str_wrap("Moderately close e.g. arms length",10),
-                                                                             str_wrap("Very close (near touching)",10))) +
+                                                                             str_wrap("Very close e.g. near touching",10))) +
       scale_y_continuous(limits = c(0,100),breaks = c(0,25,50,75,100),labels=c(str_wrap("Never exposed",7),
                                                                                str_wrap("Exposed once a year",7),
                                                                                str_wrap("Exposed once a month",7),
@@ -773,11 +773,11 @@ main.plot <- function(triggers="Introduction"){
       ), size=emp,fill=trigger.dum,colour=trigger.dum),alpha=0.7) +
       scale_fill_manual(values=c(alpha("#14365D",0.1),alpha("#DD347A",0.3))) +
       scale_colour_manual(values=c(alpha("#14365D",0.3),"#DD347A")) +
-      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Don't work near people",10),
+      scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Do not work near people",10),
                                                                              str_wrap("Work with others, but not closely",10),
                                                                              str_wrap("Slightly close e.g. Shared office",10),
                                                                              str_wrap("Moderately close e.g. arms length",10),
-                                                                             str_wrap("Very close (near touching)",10))) +
+                                                                             str_wrap("Very close e.g. near touching",10))) +
       scale_y_continuous(limits = c(0,100),breaks = c(0,25,50,75,100),labels=c(str_wrap("Never exposed",7),
                                                                                str_wrap("Exposed once a year",7),
                                                                                str_wrap("Exposed once a month",7),
@@ -810,11 +810,11 @@ final.plot <- function(occupation_focus=""){
     ), size=emp,fill=occ.focus,colour=occ.focus),alpha=0.7) +
     scale_fill_manual(values=c(alpha("#14365D",0.5),alpha("#DD347A",0.8))) +
     scale_colour_manual(values=c(alpha("#14365D",0.5),"#DD347A")) +
-    scale_x_continuous(limits = c(0,100),expand=c(0,0),breaks=c(0,25,50,75,100),labels=c(str_wrap("Don't work near people",20),
-                                                                           str_wrap("Work with others, but not closely",20),
-                                                                           str_wrap("Slightly close e.g. Shared office",20),
-                                                                           str_wrap("Moderately close e.g. arms length",20),
-                                                                           str_wrap("Very close (near touching)",20))) +
+    scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Do not work near people",10),
+                                                                           str_wrap("Work with others, but not closely",10),
+                                                                           str_wrap("Slightly close e.g. Shared office",10),
+                                                                           str_wrap("Moderately close e.g. arms length",10),
+                                                                           str_wrap("Very close e.g. near touching",10))) +
     scale_y_continuous(limits = c(0,100),expand=c(0,0),breaks = c(0,25,50,75,100),labels=c(str_wrap("Never exposed",20),
                                                                              str_wrap("Exposed once a year",20),
                                                                              str_wrap("Exposed once a month",20),
