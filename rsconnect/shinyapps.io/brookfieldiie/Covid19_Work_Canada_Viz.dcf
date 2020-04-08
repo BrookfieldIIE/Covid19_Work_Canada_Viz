@@ -1,0 +1,12 @@
+name: Covid19_Work_Canada_Viz
+title: Covid19_Work_Canada_Viz
+username:
+account: brookfieldiie
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2073021
+bundleId: 2981551
+url: https://brookfieldiie.shinyapps.io/Covid19_Work_Canada_Viz/
+when: 1586274795.79468
+asMultiple: FALSE
+asStatic: FALSE

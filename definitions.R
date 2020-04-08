@@ -156,6 +156,7 @@ main.plot <- function(triggers="Introduction"){
                            yaxis=list(fixedrange=TRUE),
                            showlegend = FALSE),
                     displayModeBar=F)
+    graph$x$layout$annotations[[1]]$text <-""
     graph$x$layout$xaxis$title$font$size <- 15
     graph$x$layout$yaxis$title$font$size <- 15
     graph
@@ -245,6 +246,7 @@ main.plot <- function(triggers="Introduction"){
                            yaxis=list(fixedrange=TRUE),
                            showlegend = FALSE),
                     displayModeBar=F)
+    graph$x$layout$annotations[[1]]$text <-""
     graph$x$data[[4]]$textposition <- "middle left"
     graph$x$data[[6]]$textposition <- "middle left"
     graph$x$data[[8]]$textposition <- "middle left"
@@ -311,6 +313,7 @@ main.plot <- function(triggers="Introduction"){
                            yaxis=list(fixedrange=TRUE),
                            showlegend = FALSE),
                     displayModeBar=F)
+    graph$x$layout$annotations[[1]]$text <-""
     graph$x$data[[4]]$textposition <- "middle left"
     graph$x$data[[6]]$textposition <- "middle left"
     graph$x$layout$xaxis$title$font$size <- 15
@@ -388,6 +391,7 @@ main.plot <- function(triggers="Introduction"){
                            yaxis=list(fixedrange=TRUE),
                            showlegend = FALSE),
                     displayModeBar=F)
+    graph$x$layout$annotations[[1]]$text <-""
     graph$x$layout$xaxis$title$font$size <- 15
     graph$x$layout$yaxis$title$font$size <- 15
     graph$x$data[[4]]$textposition <- "middle left"
@@ -468,6 +472,7 @@ main.plot <- function(triggers="Introduction"){
                            yaxis=list(fixedrange=TRUE),
                            showlegend = FALSE),
                     displayModeBar=F)
+    graph$x$layout$annotations[[1]]$text <-""
     graph$x$data[[4]]$textposition <- "middle left"
     graph$x$data[[6]]$textposition <- "middle right"
     graph$x$data[[8]]$textposition <- "middle left"
@@ -504,6 +509,7 @@ main.plot <- function(triggers="Introduction"){
                            yaxis=list(fixedrange=TRUE),
                            showlegend = FALSE),
                     displayModeBar=F)
+    graph$x$layout$annotations[[1]]$text <-""
     graph$x$layout$xaxis$title$font$size <- 15
     graph$x$layout$yaxis$title$font$size <- 15
     graph
@@ -551,6 +557,7 @@ main.plot <- function(triggers="Introduction"){
                            yaxis=list(fixedrange=TRUE),
                            showlegend = FALSE),
                     displayModeBar=F)
+    graph$x$layout$annotations[[1]]$text <-""
     graph$x$data[[4]]$textposition <- "middle left"
     graph$x$layout$xaxis$title$font$size <- 15
     graph$x$layout$yaxis$title$font$size <- 15
@@ -614,6 +621,7 @@ main.plot <- function(triggers="Introduction"){
                            yaxis=list(fixedrange=TRUE),
                            showlegend = FALSE),
                     displayModeBar=F)
+    graph$x$layout$annotations[[1]]$text <-""
     graph$x$data[[4]]$textposition <- "middle right"
     graph$x$data[[6]]$textposition <- "middle left"
     graph$x$layout$xaxis$title$font$size <- 15
@@ -721,6 +729,7 @@ main.plot <- function(triggers="Introduction"){
                            yaxis=list(fixedrange=TRUE),
                            showlegend = FALSE),
                     displayModeBar=F)
+    graph$x$layout$annotations[[1]]$text <-""
     graph$x$data[[4]]$textposition <- "middle left"
     graph$x$data[[6]]$textposition <- "middle left"
     graph$x$data[[8]]$textposition <- "middle left"
@@ -790,6 +799,7 @@ main.plot <- function(triggers="Introduction"){
                            yaxis=list(fixedrange=TRUE),
                            showlegend = FALSE),
                     displayModeBar=F)
+    graph$x$layout$annotations[[1]]$text <-""
     graph$x$layout$xaxis$title$font$size <- 15
     graph$x$layout$yaxis$title$font$size <- 15
     graph
@@ -810,12 +820,12 @@ final.plot <- function(occupation_focus=""){
     ), size=emp,fill=occ.focus,colour=occ.focus),alpha=0.7) +
     scale_fill_manual(values=c(alpha("#14365D",0.5),alpha("#DD347A",0.8))) +
     scale_colour_manual(values=c(alpha("#14365D",0.5),"#DD347A")) +
-    scale_x_continuous(limits = c(0,100),breaks=c(0,25,50,75,100),labels=c(str_wrap("Do not work near people",10),
-                                                                           str_wrap("Work with others, but not closely",10),
-                                                                           str_wrap("Slightly close e.g. Shared office",10),
-                                                                           str_wrap("Moderately close e.g. arms length",10),
-                                                                           str_wrap("Very close e.g. near touching",10))) +
-    scale_y_continuous(limits = c(0,100),expand=c(0,0),breaks = c(0,25,50,75,100),labels=c(str_wrap("Never exposed",20),
+    scale_x_continuous(limits = c(0,100),expand=c(0,0),breaks=c(0,25,50,75,100),labels=c(str_wrap("Do not work near people",20),
+                                                                           str_wrap("Work with others, but not closely",20),
+                                                                           str_wrap("Slightly close e.g. Shared office",20),
+                                                                           str_wrap("Moderately close e.g. arms length",20),
+                                                                           str_wrap("Very close e.g. near touching",20))) +
+    scale_y_continuous(limits = c(0,100),expand=c(0.01,0),breaks = c(0,25,50,75,100),labels=c(str_wrap("Never exposed",20),
                                                                              str_wrap("Exposed once a year",20),
                                                                              str_wrap("Exposed once a month",20),
                                                                              str_wrap("Exposed once a week",20),
@@ -841,6 +851,7 @@ final.plot <- function(occupation_focus=""){
                          yaxis=list(fixedrange=TRUE),
                          showlegend = FALSE),
                   displayModeBar=F)
+  graph$x$layout$annotations[[1]]$text <-""
   graph$x$layout$xaxis$title$font$size <- 18
   graph$x$layout$yaxis$title$font$size <- 18
   graph

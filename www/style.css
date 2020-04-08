@@ -432,6 +432,10 @@ i{
   text-decoration-color:#14365D;
 }
 
+#Occ_choice{
+  width:100% !important;
+}
+
 @media (min-width: 320px) {
 
     .alignedrow {
