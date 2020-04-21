@@ -25,7 +25,7 @@ ui <- fluidPage(theme="style.css",
         fluidRow(style="font-family: rooneysanslight !important; text-align:center; padding-bottom:50px",
                  p("Thank you for your interest in exploring how Covid-19 might change work in Canada."),
                  p("Unfortunately, this interactive data visualization can only be experienced on a larger screen at this time.",
-                 "If you are unable to do so, please visit the",a("accompanying blog post",href="https://brookfieldinstitute.ca/"), "which explores insights from this visualization."))),
+                 "If you are unable to do so, please visit the",a("accompanying blog post",href="https://brookfieldinstitute.ca/commentary/anything-but-static-risks-of-covid-19-to-workers-in-canada"), "which explores insights from this visualization."))),
 
         # Show a plot of the generated distribution
     div(class="desktopscreen",
@@ -52,11 +52,12 @@ ui <- fluidPage(theme="style.css",
                                      "connected by a",
                                      a("crosswalk", href="https://brookfieldinstitute.ca/commentary/connecting-the-dots-linking-canadian-occupations-to-skills-data/"),
                                      "developed by the Brookfield Institute."),
-                                   p("We will add new dimensions to this research over time, to paint a fuller picture of how COVID-19 may affect the economic precarity and risk faced by different workers. We welcome your recommendations. ")
+                                   p("We will add new dimensions to this research over time, to paint a fuller picture of how COVID-19 may affect the economic precarity and risk faced by different workers. We welcome your recommendations. "),
+                                   p("For a static write-up of this data visualization, please consult",a("this blog",href="https://brookfieldinstitute.ca/commentary/anything-but-static-risks-of-covid-19-to-workers-in-canada"),"authored by Viet Vu and Nisa Malli.")
                                    )
                                ),
                       fluidRow(style="margin-left:0%; margin-right:0%;font-family: rooneysanslight !important; text-align:center; padding-bottom:0px; border-top:1px solid #14365D",
-                               "Scroll down to interact with this data visualization. It is intended to be viewed on a desktop computer."),
+                               "Scroll down to interact with this data visualization. It is intended to be viewed on a computer screen."),
                       fluidRow(style="margin-left:0%; margin-right:0%;text-align:center; padding-bottom:0px; padding-top:0px",includeHTML("www/arrow_down.html")),
                scrolly_container("scr"
                                , scrolly_graph( div(style="padding-top:30%"),
@@ -228,7 +229,7 @@ ui <- fluidPage(theme="style.css",
     fluidRow(class="alignedrow",align = "center",
              style="margin:auto; width:50%",
              includeHTML("www/search_icon.html"),
-             uiOutput("Occ_choice")),
+             uiOutput("Occ_choice",style="width:100%")),
     fluidRow(align="center",
              style ="margin:auto; width:80%",
              plotlyOutput("finalgraph",width="100%",height="600px")),
@@ -287,7 +288,7 @@ server <- function(input, output) {
     selectInput("occ",
                 label=NULL,
                 choice = sort(unique(work.styles.to.plot[,str_sub(noc_title,5)])),
-                selected = "Taxi and limousine drivers and chauffeurs",width="600px"))
+                selected = "Taxi and limousine drivers and chauffeurs",width="100%"))
     output$mainPlot <- renderPlotly({
       if(length(input$scr)==0){
         main.plot()
