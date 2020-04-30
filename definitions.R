@@ -130,6 +130,8 @@ setkey(age,NOC693A)
 setkey(work.styles.to.plot,noc_title)
 work.styles.to.plot <-  work.styles.to.plot[age,nomatch=0]
 
+
+load("data/data_for_toronto.RDA")
 main.plot <- function(triggers="Introduction"){
   if(triggers=="Introduction"){
     main.plot <- ggplot(work.styles.to.plot,aes(`Physical Proximity`,`Exposed to Disease or Infections`)) +
@@ -766,13 +768,14 @@ main.plot <- function(triggers="Introduction"){
                            yaxis=list(fixedrange=TRUE),
                            showlegend = FALSE),
                     displayModeBar=F)
+    graph$x$layout$annotations[[1]]$text <-""
     graph$x$layout$xaxis$title$font$size <- 15
     graph$x$layout$yaxis$title$font$size <- 15
     graph
   }
   else if(triggers=="Visible Minority Workers"){
     work.styles.to.plot[,trigger.dum:="0"]
-    work.styles.to.plot[Share.vm>=0.21,trigger.dum:="1"]
+    work.styles.to.plot[Share.vm>=0.5,trigger.dum:="1"]
     main.plot <- ggplot(work.styles.to.plot,aes(`Physical Proximity`,`Exposed to Disease or Infections`)) +
       BF.Base.Theme +
       geom_point(aes(text=paste(str_sub(noc_title,start=5),
@@ -791,7 +794,36 @@ main.plot <- function(triggers="Introduction"){
                                                                                str_wrap("Exposed once a year",7),
                                                                                str_wrap("Exposed once a month",7),
                                                                                str_wrap("Exposed once a week",7),
-                                                                               str_wrap("Exposed once a day",7)))
+                                                                               str_wrap("Exposed once a day",7))) +
+    
+    annotate("segment",
+             x=90,
+             y=93.5,
+             xend=67,
+             yend=70,
+             colour = "#e24585",
+             linetype = "dotted") +
+      annotate("text",
+               x = 67,
+               y = 70,
+               colour = "#e24585",
+               label = "Licensed Practical Nurses",
+               hjust = 0,
+               size = 9*0.352777778) +
+      annotate("segment",
+               x=85.375,
+               y=87.375,
+               xend=63,
+               yend=60,
+               colour = "#e24585",
+               linetype = "dotted") +
+      annotate("text",
+               x=63,
+               y=60,
+               colour = "#e24585",
+               label = "Registered Nurses",
+               hjust = 0,
+               size = 9*0.352777778)
     
     graph <- config(layout(ggplotly(main.plot,tooltip=c("text"),showlegend=FALSE,showscale=FALSE),
                            legend = list(orientation = 'h'),
@@ -802,6 +834,8 @@ main.plot <- function(triggers="Introduction"){
     graph$x$layout$annotations[[1]]$text <-""
     graph$x$layout$xaxis$title$font$size <- 15
     graph$x$layout$yaxis$title$font$size <- 15
+    graph$x$data[[4]]$textposition <- "middle left"
+    graph$x$data[[6]]$textposition <- "middle left"
     graph
   }
 }

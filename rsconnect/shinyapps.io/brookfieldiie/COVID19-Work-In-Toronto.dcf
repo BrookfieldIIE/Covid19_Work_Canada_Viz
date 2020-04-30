@@ -1,0 +1,12 @@
+name: COVID19-Work-In-Toronto
+title: COVID19-Work-In-Toronto
+username:
+account: brookfieldiie
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2171744
+bundleId: 3055137
+url: https://brookfieldiie.shinyapps.io/COVID19-Work-In-Toronto/
+when: 1587653204.45111
+asMultiple: FALSE
+asStatic: FALSE
